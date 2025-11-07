@@ -3,11 +3,15 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        VariaveisETipos();
+        //VariaveisETipos();
         //OperadoresAritmeticos();
         //OperadoresComparacao();
         //OperadoresLogicos();
         //OperadoresAtribuicao();
+        //EstruturasCondicionais();
+        //LacosRepeticao();
+
+
     }
 
     // 1. Variáveis e Tipos de Dados
@@ -123,5 +127,93 @@ internal class Program
 
         num /= 4; // num = num / 4
         Console.WriteLine($"num /= 4 -> {num}");
+    }
+
+    // 6. Estruturas Condicionais
+    static void EstruturasCondicionais()
+    {
+        int numero = 10;
+        int outroNumero = 5;
+        string texto = "Exemplo";
+
+        Console.WriteLine("6. Estruturas Condicionais\n");
+
+        if (numero > outroNumero)
+        {
+            Console.WriteLine($"{numero} é maior que {outroNumero}");
+        }
+        else if (numero < outroNumero)
+        {
+            Console.WriteLine($"{numero} é menor que {outroNumero}");
+        }
+        else
+        {
+            Console.WriteLine($"{numero} e {outroNumero} são iguais");
+        }
+
+        switch (texto)
+        {
+            case "Teste":
+                Console.WriteLine("O texto é 'Teste'");
+                break;
+
+            case "Exemplo":
+                Console.WriteLine("O texto é 'Exemplo'");
+                break;
+
+            case "Outro":
+                Console.WriteLine("O texto é 'Outro'");
+                break;
+
+            default:
+                Console.WriteLine("Texto não reconhecido");
+                break;
+        }
+    }
+
+    // 7. Laços de Repetição
+    static void LacosRepeticao()
+    {
+        Console.WriteLine("7. Laços de Repetição\n");
+
+        // Exemplo de FOR
+        Console.WriteLine("Exemplo de FOR:");
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine($"Contagem: {i}");
+        }
+
+        Console.WriteLine();
+
+        // Exemplo de WHILE
+        Console.WriteLine("Exemplo de WHILE:");
+        int contador = 1;
+        while (contador <= 5)
+        {
+            Console.WriteLine($"Valor do contador: {contador}");
+            contador++;
+        }
+
+        Console.WriteLine();
+
+        // Exemplo de DO WHILE
+        Console.WriteLine("Exemplo de DO WHILE:");
+        int numero = 1;
+        do
+        {
+            Console.WriteLine($"Número atual: {numero}");
+            numero++;
+        } while (numero <= 5);
+
+        Console.WriteLine();
+
+        // Exemplo de FOREACH
+        Console.WriteLine("Exemplo de FOREACH:");
+        string[] frutas = { "Maçã", "Banana", "Laranja", "Uva" };
+
+        foreach (string fruta in frutas)
+        {
+            Console.WriteLine($"Fruta: {fruta}");
+        }
     }
 }
